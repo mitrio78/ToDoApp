@@ -20,17 +20,14 @@ class TaskListViewControllerTests: XCTestCase {
                     String(describing: TaskListViewController.self)
             )
         sut = viewController as? TaskListViewController
-        
         sut.loadViewIfNeeded()
     }
-
     override func tearDownWithError() throws {
     }
 
     func testTableViewNotNilWhenViewDidLoaded() {
         XCTAssertNotNil(sut.tableView)
     }
-    
     func testWhenViewIsLoadedDataProviderIsNotNil() {
         XCTAssertNotNil(sut.dataProvider)
     }
